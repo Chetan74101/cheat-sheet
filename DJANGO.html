@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="prism.css" />
+  <script src="prism.js"></script>
+  <title>DJANGO Cheat Sheet</title>
+</head>
+
+<body>
+
+  <body background="django-b.png"
+    style="background-repeat: no-repeat;background-size: 100% 100%;background-attachment: fixed;backdrop-filter: blur(14px);">
+    <h1 style="font-size: 60px;text-align: center;"><b>Django CheatSheet</b></h1>
+    <br>
+
+    <div class="container" style="width: 60vw; margin: auto; padding: 32px 0">
+      <h1 style="font-family: Georgia"></h1>
+      <ul>
+        <br><br><br>
+        <h1 style="font-family:Georgia;"><b>What is Django?</b></h1><br>Python-based web framework used for rapid
+        development.<br><br>
+
+        <br>
+        <h1 style="font-family:Georgia;"><b>Installing Django + Setup</b></h1><br><br>
+
+        <li><b>Installing Django + Setup</b><br><br>
+          <pre class="language-Django"><code>pip install django</code></pre>
+        </li><br><br>
+
+        <li><b>Creating a project</b><br><br>The below command creates a new project.<br><br>
+          <pre class="language-Django"><code>django-admin
+startproject
+projectName</code></pre>
+        </li><br><br>
+
+        <li><b>Starting a server</b><br><br>The below command starts the development server.<br><br>
+          <pre class="language-Django"><code>python manage.py runserver</code></pre>
+        </li><br><br>
+
+        <br>
+        <h1 style="font-family:Georgia;"><b>Django MVT</b></h1><br><br>Django follows MVT(Model, View, Template)
+        architecture.<br><br>
+
+        <li><b>Sample Django Model</b><br><br>The model represents the schema of the database.<br><br>
+          <pre class="language-Django"><code>from django.db import models  
+class Product(models.Model): //Product is the name of our model
+product_id=models.AutoField
+                </code></pre>
+        </li><br><br>
+
+        <li><b>Sample views.py</b><br><br>View decides what data gets delivered to the template.<br><br>
+          <pre class="language-Django"><code>from django.http import HttpResponse 
+def index(request): 
+return HttpResponse(''sjkdhf djhfsk djksjhdlfj slk dhsldhklshd shld lfkshdhflksjhdf s dlk'') 
+                </code></pre>
+        </li><br><br>
+
+        <li><b>Sample HTML Template</b><br><br>A sample .html file that contains HTML, CSS and Javascript.<br><br>
+          <pre class="language-Django"><code>&lt;!DOCTYPE html&gt; 
+&lt;html lang="en"&gt; 
+    &lt;head&gt; 
+        &lt;meta charset="UTF-8"&gt; 
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; 
+        &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt; &lt;title&gt;CodeWithHarry Cheatsheet&lt;/title&gt; 
+    &lt;/head&gt; 
+    &lt;body&gt; 
+        &lt;h1&gt;This is a sample template file.&lt;/h1&gt; 
+    &lt;/body&gt; 
+&lt;/html&gt; 
+                </code></pre>
+        </li><br><br>
+
+        <br>
+        <h1 style="font-family:Georgia;"><b>Views in Django</b></h1><br><br>
+
+        <li><b>Sample Function-Based Views</b><br><br>A python function that takes a web request and returns a web
+          response.<br><br>
+          <pre class="language-Django"><code>from django.http import HttpResponse 
+                def index(request): return HttpResponse(''This is a function based view.') 
+                 </code></pre>
+        </li><br><br>
+
+        <li><b>Sample Class-Based Views</b><br><br>Django's class-based views provide an object-oriented (OO) way of
+          organizing your view code.<br><br>
+          <pre class="language-Django"><code>from django.views import View 
+            class SimpleClassBasedView(View): def get(self, request): 
+            ... # code to process a GET request
+            </code></pre>
+        </li><br><br>
+
+        <br>
+        <h1 style="font-family:Georgia;"><b>URLs in Django</b></h1><br><br>set of URL patterns to be matched against the
+        requested URL.<br><br>
+
+        <li><b>Sample urls.py file</b><br><br>
+          <pre class="language-Django"><code>from django.contrib import admin from django.urls import path from . import views 
+            urlpatterns = [ path('admin/', admin.site.urls), path('', views.index, name='index'), path('about/', views.about, name='about'), ]
+            </code></pre>
+        </li><br><br>
+
+        <br>
+        <h1 style="font-family:Georgia;"><b>Forms in Django</b></h1><br><br>Similar to HTML forms but are created by
+        Django using the form field.<br><br>
+
+        <li><b>Sample Django form</b><br><br>
+          <pre class="language-Django"><code>from django import forms 
+            # creating a form class SampleForm(forms.Form): Name = forms.CharField() description = forms.CharField() 
+            </code></pre>
+        </li><br><br>
+
+        <br>
+        <h1 style="font-family:Georgia;"><b>Apps in Django</b></h1><br><br>Apps in Django are like independent modules
+        for different functionalities.<br><br>
+
+        <li><b>Creating an app</b><br><br>
+          <pre class="language-Django"><code>python manage.py startapp AppName</code></pre>
+        </li><br><br>
+
+        <li><b>Listing app in the settings.py</b><br><br>After creating an app, we need to list the app name in
+          INSTALLED_APPS<br><br>
+          <pre class="language-Django"><code>INSTALLED_APPS = [  
+          'django.contrib.admin',  
+          'django.contrib.auth',  
+          'django.contrib.contenttypes',  
+          'django.contrib.sessions',  
+          'django.contrib.messages',  'django.contrib.staticfiles',  
+          'AppName'  
+          ]
+          </code></pre>
+        </li><br><br>
+
+        <br>
+        <h1 style="font-family:Georgia;"><b>Templates in Django</b></h1><br><br>Used to handle dynamic HTML files
+        separately.<br><br>
+
+        <li><b>Configuring templates in settings.py</b><br><br>
+          <pre class="language-Django"><code>TEMPLATES = [ 
+          { 
+          'BACKEND': 'django.template.backends.django.DjangoTemplates', 
+          'DIRS': ["templates"], 
+          'APP_DIRS': True, 
+          'OPTIONS': { # ... some options here ... 
+          }, 
+          }, 
+          ]
+          </code></pre>
+        </li><br><br>
+
+        <li><b>Changing the views.py file</b><br><br>A view is associated with every template file. This view is
+          responsible for displaying the content from the template.<br><br>
+          <pre class="language-Django"><code>def index(request): 
+        return render(request, 'index.html') ; #render is used to return the templat
+        </code></pre>
+        </li><br><br>
+
+        <li><b>Sample template file</b><br><br>
+          <pre class="language-Django"><code>&lt;!DOCTYPE html&gt; 
+      &lt;html lang="en"&gt; 
+      &lt;head&gt; 
+      &lt;meta charset="UTF-8"&gt; 
+      &lt;title&gt;Template is working&lt;/title&gt; 
+      &lt;/head&gt; 
+      &lt;body&gt; &lt;h1&gt;This is a sample django template.&lt;/h1&gt; 
+      &lt;/body&gt; 
+      &lt;/html&gt; 
+      </code></pre>
+        </li><br><br>
+
+        <br>
+        <h1 style="font-family:Georgia;"><b>Migrations in Django</b></h1><br><br>Migrations are Django's way of updating
+        the database schema according to the changes that you make to your models.<br><br>
+
+        <li><b>Creating a migration</b><br><br>The below command is used to make migration but no changes are made to
+          the actual database.<br><br>
+          <pre class="language-Django"><code>python manage.py makemigrations </code></pre>
+        </li><br><br>
+
+        <li><b>Applying the migration</b><br><br>The below command is used to apply the changes to the actual
+          database.<br><br>
+          <pre class="language-Django"><code>python manage.py migrate</code></pre>
+        </li><br><br>
+
+        <br>
+        <h1 style="font-family:Georgia;"><b>Admin interface in Django</b></h1><br><br>Django comes with a ready-to-use
+        admin interface.<br><br>
+
+        <li><b>Creating the admin user</b><br><br>
+          <pre class="language-Django"><code>python manage.py createsuperuser</code></pre>
+        </li><br><br>
+
+        <br>
+        <h1 style="font-family:Georgia;"><b>Page Redirection</b></h1><br><br>Redirection is used to redirect the user to
+        a specific page of the application on the occurrence of an event.<br><br>
+
+        <li><b>Redirect method</b><br><br>
+          <pre class="language-Django"><code>from django.shortcuts import render, redirect 
+      def redirecting(request): 
+      return redirect("https://www.abc.com.com") 
+      </code></pre>
+        </li><br><br>
+      </ul>
+    </div>
+  </body>
+
+</html>

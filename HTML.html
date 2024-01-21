@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <title>HTML Cheat Sheet</title>
+</head>
+
+<body>
+    <body background="html-b.png" style="background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed; backdrop-filter: blur(14px);">
+
+    <h1 style="font-size:60px; color: aliceblue; text-align: center;"><b>HTML CheatSheet</b>
+    </h1><br>
+
+    <div class="container" style=" width:60vw; margin: auto;padding: 32px 0;">
+        <h1 style="font-family:Georgia;"><b>Structure</b></h1><br>
+        This is the basic template or barebone structure of HTML.<br><br>
+
+        <ul>
+            <li><b>Boilerplate:</b>
+                <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+            </li>
+            <br>
+            <h1 style="font-family:Georgia;"><b>Headings</b></h1><br>
+            There are six headings available in HTML, H1 is the largest among all, and H6 is the smallest.<br><br>
+
+            <li><b> &lt;h1&gt; Tag</b>
+                <pre class="language-html"><code>&lt;h1&gt;Heading 1&lt;/h1&gt;</code></pre>
+            </li>
+
+            <li><b>&lt;h2&gt; Tag</b>
+                <pre class="language-html"><code>&lt;h2&gt;Heading 2&lt;/h2&gt;</code></pre>
+            </li>
+
+            <li><b>&lt;h3&gt; Tag</b>
+                <pre class="language-html"><code>&lt;h3&gt;Heading 3&lt;/h3&gt;</code></pre>
+            </li>
+
+            <li><b>&lt;h4&gt; Tag</b>
+                <pre class="language-html"><code>&lt;h4&gt;Heading 4&lt;/h4&gt;</code></pre>
+            </li>
+
+            <br>
+            <h1 style="font-family:Georgia;"><b>Container</b></h1><br>
+            Container tags are the tags that contain some data such as text, image, etc. There are several container
+            tags in HTML.<br><br>
+            <li><b>div tag</b><br><br>div tag or division tag is used to make blocks or divisions in the
+                document.<br><br>
+                <pre class="language-html"><code>&lt;div&gt; This is div block &lt;/div&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>span tag</b><br>span is a container for inline content.<br><br>
+                <pre class="language-html"><code>&lt;span&gt;This is span block &lt;/span&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>p tag</b><br><br>Paragraph<br><br>
+                <pre class="language-html"><code>&lt;p&gt;This is paragraph &lt;/p&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>pre tag</b><br><br>pre tag represents pre-formatted text.<br><br>
+                <pre class="language-html"><code>&lt;pre&gt; Hello World &lt;/pre&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>code tag</b><br><br>code tag is used to represent source codes.<br><br>
+                <pre class="language-html"><code>&lt;code&gt;
+import python 
+&lt;/code&gt;</code></pre>
+            </li><br><br>
+
+            <br>
+            <h1 style="font-family:Georgia;"><b>Text Formatting</b></h1><br><br>
+            Text formatting tags are used to format text or data of HTML documents. You can do certain things like
+            creating italic, bold, strong text to make your document look more attractive and understandable.<br><br>
+
+            <li><b>&lt;b&gt; tag</b><br><br>
+                <pre class="language-html"><code>&lt;b&gt; I'm bold text &lt;/b&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>&lt;strong&gt; tag</b><br><br>
+                <pre class="language-html"><code>&lt;strong&gt; I'm important text &lt;/strong&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>&lt;i&gt; tag</b><br><br>
+                <pre class="language-html"><code>&lt;i&gt; I'm italic text &lt;/i&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>&lt;em&gt; tag</b><br><br>
+                <pre class="language-html"><code>&lt;em&gt; Emphasized text &lt;/em&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>&lt;sub&gt; tag</b><br><br>
+                <pre class="language-html"><code>&lt;sub&gt; Subscript &lt;/sub&gt;</code></pre>
+            </li><br><br>
+
+            <br>
+            <h1 style="font-family:Georgia;"><b>Lists</b></h1><br><br>Lists can be either numerical, alphabetic, bullet,
+            or other symbols. You can
+            specify list type and list items in HTML for the clean document.<br><br>
+
+            <li><b>&lt;ol&gt; tag</b><br><br>Ordered list starts with &lt;ol&gt; tag and each list item starts with
+                &lt;li&gt; tag.<br><br>
+                <pre class="language-html"><code>&lt;ol&gt; 
+    &lt;li&gt;Data 1&lt;/li&gt; 
+    &lt;li&gt;Data 2&lt;/li&gt;
+    &lt;li&gt;Data 3&lt;/li&gt;  
+&lt;/ol&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>&lt;ul&gt; tag</b><br><br>
+                <pre class="language-html"><code>&lt;ul&gt; 
+    &lt;li&gt;Your Data&lt;/li&gt; 
+    &lt;li&gt;Your Data&lt;/li&gt; 
+&lt;/ul&gt;</code></pre>
+            </li><br><br>
+
+            <br>
+            <h1 style="font-family:Georgia;"><b>Media</b></h1><br><br>Media is anything that is present in digital form such as image, video, audio, etc.<br><br>
+            <li><b>&lt;audio&gt; tag</b><br><br>It is used to embed sound content in the document.<br><br>
+                <pre class="language-html"><code>&lt;audio controls&gt; 
+    &lt;source src="demo.mp3" type="audio/mpeg"&gt; Your browser does not support the audio element. 
+&lt;/audio&gt;
+                    </code></pre>
+            </li><br><br>
+
+            <li><b>&lt;img&gt; tag</b><br><br>It is used to embed or import image in a webpage.<br><br>
+                <pre class="language-html"><code>&lt;img src="Source_of_image" alt="Alternate text"&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>&lt;video&gt; tag</b><br><br>It is used to embed video in the webpage.<br><br>
+                <pre class="language-html"><code>&lt;video width="480" height="320" controls&gt; 
+    &lt;source src="demo_move.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag. 
+&lt;/video&gt;
+                    </code></pre>
+            </li><br><br>
+
+            <br>
+            <h1 style="font-family:Georgia;"><b>Tables</b></h1><br><br>A table is a collection of rows and columns. It
+            is used to represent data in
+            tabular form.<br><br>
+            <li><b>Table Structure</b><br><br>
+                <pre class="language-html"><code>&lt;table&gt; 
+&lt;caption&gt;Demo Table&lt;/caption&gt; 
+&lt;thead&gt; 
+&lt;tr&gt; 
+&lt;th&gt;Column1&lt;/th&gt; 
+&lt;th colspan="2"&gt;Column2&lt;/th&gt; 
+&lt;/tr&gt; 
+&lt;/thead&gt; 
+&lt;tbody&gt; 
+&lt;tr&gt; 
+&lt;td&gt;Data1&lt;/td&gt; 
+&lt;td&gt;Data2&lt;/td&gt; 
+&lt;td&gt;Data2&lt;/td&gt; 
+&lt;/tr&gt; 
+&lt;tr&gt; 
+&lt;td&gt;Data1&lt;/td&gt; 
+&lt;td&gt;Data2&lt;/td&gt; 
+&lt;td&gt;Data2&lt;/td&gt; 
+&lt;/tr&gt; 
+&lt;/tbody&gt; 
+&lt;tfoot&gt; 
+&lt;tr&gt; 
+&lt;td&gt;&nbsp;&lt;/td&gt; 
+&lt;td&gt;Data&lt;/td&gt; 
+&lt;td&gt;Data&lt;/td&gt; 
+        &lt;/tr&gt; 
+    &lt;/tfoot&gt; 
+&lt;/table&gt;
+                </code></pre>
+            </li><br><br>
+
+            <br>
+            <h1 style="font-family:Georgia;"><b>Links</b></h1><br><br>Links are clickable text that can redirect you to
+            some other page.<br><br>
+
+            <li><b>&lt;a&gt; tag</b><br><br>&lt; a&gt; or anchor tag defines a hyperlink.<br><br>
+                <pre class="language-html"><code>&lt;a href="https://www.codewithharry.com/"&gt;
+    Visit CodeWithHarry.com!
+&lt;/a&gt;</code></pre>
+            </li><br><br>
+
+            <br>
+            <h1 style="font-family:Georgia;"><b>Form</b></h1><br><br>
+
+            <li><b>Sample Form</b><br><br>Form is used to collect user's input, generally user's data is sent to server
+                for further processing.<br><br>
+                <pre class="language-html"><code>&lt;form action="/action.php" method="post"&gt; 
+Name: &lt;input name="name" type="text" /&gt; &lt;br /&gt; 
+Age: &lt;input max="90" min="1" name="age" step="1" type="number" value="18" /&gt; 
+&lt;select name="gender"&gt; 
+&lt;option selected="selected" value="male"&gt;Male&lt;/option&gt; 
+&lt;option value="female"&gt;Female&lt;/option&gt; 
+&lt;/select&gt;&lt;br /&gt; &lt;input checked="checked" name="newsletter" type="radio" value="daily" /&gt; Dai type="radio" value="weekly" /&gt; Weekly&lt;br /&gt; &lt;textarea cols="20" name="comments" rows="5"&gt;Comment&lt;/textarea&gt;&lt;br /&gt; 
+&lt;label&gt;&lt;input name="terms" type="checkbox" value="tandc" /&gt;Accept terms&lt;/lab
+&lt;input type="submit" value="Submit" /&gt; 
+&lt;/form&gt;
+        </code></pre>
+            </li><br><br>
+
+            <br>
+            <h1 style="font-family:Georgia;"><b>Form Elements</b></h1><br><br>We use various input types and buttons
+            inside a form as form
+            elements<br><br>
+
+            <li><b>Text Input</b><br><br>
+                <pre
+                    class="language-html"><code>&lt;input type="text" name="username" placeholder="Enter Username"&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>Password Input</b><br><br>
+                <pre
+                    class="language-html"><code>&lt;input type="password" name="password" placeholder="Enter Password"&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>Checkbox</b><br><br>
+                <pre
+                    class="language-html"><code>&lt;input type="checkbox" name="agree" value="yes"&gt; I agree</code></pre>
+            </li><br><br>
+
+            <li><b>Radio Button</b><br><br>
+                <pre
+                    class="language-html"><code>&lt;input type="radio" name="gender" value="male"&gt; Male&lt;br&gt;&lt;input type="radio" name="gender" value="female"&gt; Female</code></pre>
+            </li><br><br>
+
+            <li><b>Submit Button</b><br><br>
+                <pre class="language-html"><code>&lt;input type="submit" value="Submit"&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>Button</b><br><br>
+                <pre class="language-html"><code>&lt;button type="button"&gt;Click Me&lt;/button&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>Select (Dropdown) List</b><br><br>
+                <pre
+                    class="language-html"><code>&lt;select name="country"&gt;&lt;option value="usa"&gt;United States&lt;/option&gt;&lt;option value="canada"&gt;Canada&lt;/option&gt;&lt;/select&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>Textarea</b><br><br>
+                <pre
+                    class="language-html"><code>&lt;textarea name="comments" rows="4" cols="50"&gt;Enter comments here&lt;/textarea&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>File Input</b><br><br>
+                <pre class="language-html"><code>&lt;input type="file" name="fileupload"&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>Range Input</b><br><br>
+                <pre class="language-html"><code>&lt;input type="range" name="volume" min="0" max="100"&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>Number Input</b><br><br>
+                <pre
+                    class="language-html"><code>&lt;input type="number" name="quantity" min="1" max="10"&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>Email Input</b><br><br>
+                <pre
+                    class="language-html"><code>&lt;input type="email" name="email" placeholder="Enter Email"&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>Search Input</b><br><br>
+                <pre
+                    class="language-html"><code>&lt;input type="search" name="query" placeholder="Search"&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>URL Input</b><br><br>
+                <pre
+                    class="language-html"><code>&lt;input type="url" name="website" placeholder="Enter URL"&gt;</code></pre>
+            </li><br><br>
+
+            <li><b>Date Input</b><br><br>
+                <pre class="language-html"><code>&lt;input type="date" name="birthdate"&gt;</code></pre>
+            </li><br><br>
+
+            <br>
+            <h1 style="font-family:Georgia;"><b>Characters & Symbols</b></h1><br><br>Some symbols are not directly
+            present on the keyboard, but there
+            are some ways to use them in HTML documents. We can display them either by entity name, decimal, or
+            hexadecimal value.<br><br>
+
+            <li><b>Copyright Symbol (©)</b><br><br>
+                <pre class="language-html"><code>&copy;</code></pre>
+            </li><br><br>
+
+            <li><b>Less than (&lt;)</b><br><br>
+                <pre class="language-html"><code>&lt</code></pre>
+            </li><br><br>
+
+            <li><b>Greater than (&gt;)</b><br><br>
+                <pre class="language-html"><code>&gt</code></pre>
+            </li><br><br>
+
+            <li><b>Ampersand (&)</b><br><br>
+                <pre class="language-html"><code>&amp</code></pre>
+            </li><br><br>
+
+            <li><b>Dollar ($)</b><br><br>
+                <pre class="language-html"><code>&dollar</code></pre>
+            </li><br><br>
+
+            <br>
+            <h1 style="font-family:Georgia;"><b>Random Text</b></h1><br><br>Elon Reeve Musk FRS is an entrepreneur and
+            business magnate. He is the
+            found.<br><br>
+
+            <li><b>Elon Musk</b><br><br>
+                <pre
+                    class="language-html"><code>Elon Reeve Musk FRS is an entrepreneur and business magnate. He is the found</code></pre>
+            </li><br><br>
+
+            <li><b>Lorem</b><br><br>
+                <pre
+                    class="language-html"><code>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptatem inventore odit eos, in assumenda quidem officia. Voluptates expedita explicabo quae! A perspiciatis neque mollitia deserunt quasi consectetur, facilis error!</code></pre>
+            </li><br><br>
+
+            <br>
+            <h1 style="font-family:Georgia;"><b>Semantic Elements</b></h1><br><br>Semantic elements are those elements
+            that are self describable,
+            i.e., from their name itself, you can understand their meaning.<br><br>
+
+            <li><b>&lt;section&gt; tag</b><br><br>It defines a section in the document.<br><br>
+                <pre class="language-html"><code>&lt;section&gt;This is a section&lt;/section &gt;</code></pre>
+            </li><br><br>
+
+            <li><b>&lt;article&gt; tag</b><br><br>It represents self-contained content.<br><br>
+                <pre class="language-html"><code>&lt;article&gt; Enter your data here &lt;/article &gt;</code></pre>
+            </li><br><br>
+
+            <li><b>&lt;aside&gt; tag</b><br><br>It is used to place content in the sidebar.<br><br>
+                <pre class="language-html"><code>&lt;aside&gt; Your data &lt;/aside &gt;</code></pre>
+            </li><br><br>
+
+            <li><b>Meta Tags</b><br><br>Meta tags define metadata about the document, such as author, description, and
+                keywords.<br><br>
+                <pre class="language-html"><code>&lt;meta name="description" content="This is a description of the page"&gt;
+        &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+        &lt;meta name="author" content="Author Name"&gt;
+        </code></pre>
+            </li><br><br>
+
+            <li><b>CSS Integration</b><br><br>CSS integration can be done to style our HTML document using internal or
+                external CSS.<br><br>
+                <pre class="language-html"><code>&lt;style&gt;
+        body { background-color: lightblue; }
+      &lt;/style&gt;
+      &lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;
+      </code></pre>
+            </li><br><br>
+
+            <li><b>Accessibility</b><br><br>Make your webpage accessible to all users with these best practices.<br><br>
+                <pre class="language-html"><code>&lt;img src="image.jpg" alt="Description of Image"&gt;
+        &lt;label for="name"&gt;Name:&lt;/label&gt; &lt;input type="text" id="name" name="name"&gt;
+        </code></pre>
+            </li><br><br>
+
+            <li><b>Responsive Design</b><br><br>Design your webpage to adapt to different screen sizes using CSS media
+                queries.<nr><br>
+                    <pre class="language-html"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+        &lt;style&gt;
+          @media (max-width: 600px) {
+            body { font-size: 18px; }
+          }
+        &lt;/style&gt;
+        </code></pre>
+            </li><br><br>
+
+            <li><b>JavaScript Integration</b><br><br>Embed JavaScript directly or link to an external file for added
+                functionality.<br><br>
+                <pre class="language-html"><code>&lt;script&gt;
+        alert('Hello, World!');
+      &lt;/script&gt;
+      &lt;script src="script.js"&gt;&lt;/script&gt;
+      </code></pre>
+            </li><br><br>
+
+            <li><b>Comments</b><br><br>Comments allow you to leave notes in your code, which are ignored by
+                browsers.<br><br>
+                <pre class="language-html"><code>&lt;!-- This is a comment --&gt;</code></pre>
+            </li><br><br><br><br>
+
+            <h1 style="font-family:Georgia;"><b>Other tips for HTML Beginners</b></h1><br><br>
+            <ol>
+                <li>
+                    <b>Use a Modern Text Editor</b><br><br>Tools like Visual Studio Code (VS Code) provide syntax
+                    highlighting, autocompletion, and other helpful features. VS Code also supports Emmet for faster
+                    HTML and CSS coding.
+                </li><br><br>
+
+                <li>
+                    <b>Utilize Emmet</b><br><br>Emmet is a plugin available in many text editors that allows you to
+                    write HTML and CSS more quickly. For example, typing ul>li*5 and then pressing 'Tab' will create a &lt;ul&gt; element with five &lt;li&gt; children as shown below:
+                            <pre class="language-html"><code><ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+                          </code></pre>
+
+                        </li><br><br>
+
+                        <li>
+                            <b>Indent Your Code</b><br><br>Properly indenting your code makes it more readable. Most modern text editors offer automatic indentation.
+                        </li><br><br>
+
+                        <li>
+                            <b>Always Close Tags</b><br><br>Make sure to close all of your HTML tags. This helps to avoid unexpected rendering issues.
+                        </li><br><br>
+
+                        <li>
+                            <b>Learn CSS and JavaScript</b><br><br>Understanding CSS and JavaScript can help you create more dynamic and visually appealing websites. Consider studying them alongside HTML.
+                        </li><br><br>
+
+                        <li>
+                            <b>Use Comments Wisely</b><br><br>Comments can be helpful for leaving notes and reminders in your code, or for temporarily disabling a section of HTML.
+                        </li><br><br>
+
+                        <li>
+                            <b>Practice Regularly</b><br><br>Like any skill, practice makes perfect. Try building different types of web pages to improve your understanding and proficiency in HTML.
+                        </li><br><br>
+
+                        <li>
+                            <b>Learn about Responsive Design</b><br><br>Responsive design ensures that your website looks good on all devices. Learning about media queries and flexible grid layouts is essential for modern web development.
+                        </li><br><br>
+
+            </ol>
+
+        </ul>
+
+    </div>
+</body>
+
+</html>
